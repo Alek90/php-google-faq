@@ -8,6 +8,11 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
+.unselected, h3, p{
+    color: grey;
+}
+
+
 /* HEADER */
 
 header{
@@ -43,10 +48,6 @@ ul{
 
 li{
     padding-bottom: 10px;
-}
-
-.unselected{
-    color: black;
 }
 
 .selected{
