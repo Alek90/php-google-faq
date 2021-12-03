@@ -16,7 +16,7 @@ $nav = [
     'Domande frequenti'
 ];
 
-$content = [
+$contents = [
     [
         "question" => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
 
@@ -106,6 +106,12 @@ $content = [
         <!-- il nav sarà riempito con $nav -->
         <nav>
 
+            <?php for ($i=0; $i < count($nav); $i++) { ?>
+                
+                <a href=""> <?php echo $nav[$i] ?> </a>
+
+            <?php } ?>
+
         </nav>
 
     </header>
@@ -117,6 +123,28 @@ $content = [
         <div class="page">
 
             <!-- il contenuto di questo div sarà strutturato con $content -->
+
+            <?php for ($j=0; $j < count($contents); $j++) { 
+
+                $content = $contents[$j]; ?>
+
+                <div class="container">
+
+                    <h3> <?php echo $content['question'] ?> </h3>
+
+                    <?php for ($I=0; $I < count($content['answers']); $I++) { 
+
+                        $answer =  $content['answers'][$I];  ?>
+
+                        <p> <?php echo $answer ?> </p>
+                        
+                    <?php } ?>
+
+                </div>
+
+            <?php } ?>
+
+
         </div>
 
 
