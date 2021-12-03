@@ -96,21 +96,34 @@ $contents = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- header con logo, titolo e nav -->
     <header>
 
+        <div class="title">
+
+            <img src="https://loghi-famosi.com/wp-content/uploads/2020/09/Google-Logo.png" alt="logo google">
+    
+            <h3>Privacy e termini</h3>
+
+        </div>
 
         <!-- il nav sarà riempito con $nav -->
         <nav>
 
-            <?php for ($i=0; $i < count($nav); $i++) { ?>
-                
-                <a href=""> <?php echo $nav[$i] ?> </a>
+            <ul>
 
-            <?php } ?>
+                <?php for ($i=0; $i < count($nav); $i++) { ?>
+                    
+                    <li class="<?php echo $nav[$i]== 'Domande frequenti' ? 'selected' : 'unselected' ?>" href=""> <?php echo $nav[$i] ?> </li>
+
+                <?php } ?>
+
+            </ul>
 
         </nav>
 
@@ -130,7 +143,7 @@ $contents = [
 
                 <div class="container">
 
-                    <h3> <?php echo $content['question'] ?> </h3>
+                    <h2> <?php echo $content['question'] ?> </h2>
 
                     <?php for ($I=0; $I < count($content['answers']); $I++) { 
 
