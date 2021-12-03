@@ -10,7 +10,7 @@ body{
 }
 
 .unselected, h3, p{
-    color: grey;
+    color: rgb(179, 175, 175);
 }
 
 
@@ -66,7 +66,7 @@ li{
 
 h2{
     padding-top: 65px;
-    color: whitesmoke;
+    color: rgb(223, 223, 223);
 }
 
 p{
